@@ -8,8 +8,8 @@ import java.awt.Point;
  * @author Marcio Bernardo
  */
 public class Boundary {
-    final Point upperLeft;
-    final Point bottomRight;
+    public final Point upperLeft;
+    public final Point bottomRight;
 
     /**
      * Construtor com as coordenadas da fronteira.
@@ -19,7 +19,7 @@ public class Boundary {
      * @param x2 coordenada x do ponto inferior direito.
      * @param y2 coordenada y do ponto inferior direito.
      */
-    Boundary(int x1, int y1, int x2, int y2) {
+    public Boundary(int x1, int y1, int x2, int y2) {
         upperLeft = new Point(x1, y1);
         bottomRight = new Point(x2, y2);
     }
@@ -30,7 +30,7 @@ public class Boundary {
      * @param upperLeft ponto superior esquerdo.
      * @param bottomRight ponto inferior direito.
      */
-    Boundary(Point upperLeft, Point bottomRight) {
+    public Boundary(Point upperLeft, Point bottomRight) {
         this.upperLeft = upperLeft;
         this.bottomRight = bottomRight;
     }
