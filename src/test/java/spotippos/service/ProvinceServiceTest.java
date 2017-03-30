@@ -48,11 +48,7 @@ public class ProvinceServiceTest {
         Province p2 = new Province("Ruja", new Boundary(400, 1000, 1100, 500));
         Province p3 = new Province("Nova", new Boundary(800, 500, 1400, 0));
 
-        List<Province> expected = new ArrayList<>();
         List<Province> actual = provinceService.getProvinces();
-        expected.add(p1);
-        expected.add(p2);
-        expected.add(p3);
 
         assertEquals(p1, actual.get(0));
         assertEquals(p2, actual.get(1));

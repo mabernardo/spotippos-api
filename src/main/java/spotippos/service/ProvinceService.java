@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -38,12 +39,18 @@ public class ProvinceService {
         loadData(new FileInputStream(provincesFile));
     }
 
+    /**
+     * Carrega o json com as províncias.
+     *
+     * @param file arquivo contendo as províncias.
+     * @throws IOException caso não seja possível carregar o arquivo.
+     */
      synchronized void loadData(InputStream file) throws IOException {
         provinces = new ArrayList<>();
         ObjectMapper jsonMapper = new ObjectMapper();
         @SuppressWarnings("unchecked") Map<String, Map<String, Map<String, Map<String, Integer>>>> provincesMap =
                 jsonMapper.readValue(file, Map.class);
-        provincesMap.forEach( (String k, Map<String, Map<String, Map<String, Integer>>> v) -> {
+        provincesMap.forEach( (k, v) -> {
             int x1 = v.get("boundaries").get("upperLeft").get("x");
             int y1 = v.get("boundaries").get("upperLeft").get("y");
             int x2 = v.get("boundaries").get("bottomRight").get("x");
@@ -74,6 +81,6 @@ public class ProvinceService {
      * @return lista de províncias
      */
     public List<Province> getProvinces() {
-        return provinces;
+        return Collections.unmodifiableList(provinces);
     }
 }
