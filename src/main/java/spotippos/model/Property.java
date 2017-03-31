@@ -15,7 +15,6 @@ import java.util.List;
  */
 public class Property {
 
-    @NotNull
     private Integer id;
 
     @NotNull
