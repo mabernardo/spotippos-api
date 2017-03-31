@@ -110,7 +110,7 @@ Exemplo:
 
 Request:
 
-  GET /properties?ax={integer}&ay={integer}&bx={integer}&by={integer}
+    GET /properties?ax={integer}&ay={integer}&bx={integer}&by={integer}
 
 Response Headers:
 
