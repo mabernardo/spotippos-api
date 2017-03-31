@@ -29,10 +29,12 @@ Body:
     }
 
 Response Headers:
+
     Status: 201 Created
     Location: {URI}/properties/8001
 
 Response Body:
+
     {
         "id": 8001,
         "title": "Imóvel com 3 quartos e 2 banheiros.",
@@ -47,12 +49,14 @@ Response Body:
     }
 
 Exemplo:
+
     curl --request POST \
         --url http://localhost:8080/properties \
         --header 'content-type: application/json' \
         --data '{ "title": "Imóvel com 3 quartos e 2 banheiros.", "price": 700000, "description": "Descrição do Imóvel.", "lat": 1257, "long": 228, "beds": 3, "baths": 2, "squareMeters": 80 }'
 
 ### Buscar um imóvel específico
+
 Request:
 
     GET /properties/{id}
@@ -60,10 +64,12 @@ Request:
 Caso exista propriedade com o id informado:
 
 Response Headers:
+
     Status: 200 OK
     Content-Type: application/json;charset=UTF-8
 
 Response Body:
+
     {
         "id": 666,
         "title": "Imóvel código 666, com 4 quartos e 3 banheiros.",
@@ -80,10 +86,12 @@ Response Body:
 Caso não seja encontrada:
 
 Response Headers:
+
     Status: 404
     Content-Type: application/json;charset=UTF-8
 
 Response Body:
+
     {
         "timestamp": 1490942171445,
         "status": 404,
@@ -94,19 +102,23 @@ Response Body:
     }
 
 Exemplo:
+
     curl --request GET --url http://localhost:8080/properties/666
 
 
 ### Buscar imóveis em uma área
+
 Request:
 
   GET /properties?ax={integer}&ay={integer}&bx={integer}&by={integer}
 
 Response Headers:
+
     Status: 200 OK
     Content-Type: application/json;charset=UTF-8
 
 Response Body:
+
     {
         "foundProperties": 18,
         "properties": [
@@ -129,6 +141,7 @@ Response Body:
     }
 
 Exemplo:
+
     curl --request GET --url 'http://localhost:8080/properties?ax=50&ay=100&bx=100&by=50'
 
 ## Dependencies
