@@ -22,6 +22,13 @@ public class PropertyController {
     @Autowired
     private PropertyService propertyService;
 
+    /**
+     * Busca uma Propriedade por seu Id.
+     *
+     * @param id id da propriedade.
+     * @return dados da propriedade.
+     * @throws 404 caso n&atilde;o exista propriedade com o id informado.
+     */
     @RequestMapping(value = "/properties/{id}", method = RequestMethod.GET)
     public Property findById(@PathVariable Integer id) {
         Property p = propertyService.findById(id);
@@ -31,6 +38,15 @@ public class PropertyController {
         return p;
     }
 
+    /**
+     * Busca por todas as propriedades contidas nas coordenadas informadas.
+     *
+     * @param ax coordenada ax
+     * @param ay coordenada ay
+     * @param bx coordenada bx
+     * @param by coordenada by
+     * @return Lista das propriedades encontradas.
+     */
     @RequestMapping(value = "/properties", method = RequestMethod.GET)
     public RestListResponse findByArea(@RequestParam Integer ax, @RequestParam Integer ay,
                                        @RequestParam Integer bx, @RequestParam Integer by) {
@@ -38,6 +54,12 @@ public class PropertyController {
         return new RestListResponse<>(propertyService.findByArea(ax, ay, bx, by));
     }
 
+    /**
+     * Adiciona uma propriedade.
+     *
+     * @param property dados da propriedade.
+     * @return dados na propriedade inserida.
+     */
     @RequestMapping(value = "/properties", method = RequestMethod.POST)
     public ResponseEntity<Property> addProperty(@RequestBody @Valid Property property) {
         Property result = propertyService.add(property);

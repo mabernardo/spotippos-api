@@ -3,7 +3,7 @@ package spotippos.model;
 import java.awt.Point;
 
 /**
- * Classe que define as fronteiras de uma província.
+ * Classe que define as fronteiras de uma prov&iacute;ncia.
  *
  * @author Marcio Bernardo
  */

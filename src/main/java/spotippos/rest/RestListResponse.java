@@ -3,7 +3,7 @@ package spotippos.rest;
 import java.util.List;
 
 /**
- * Template de retorno de buscas com mais que um resultado.
+ * Template de retorno de buscas lista de resultados.
  *
  * @author Marcio Bernardo.
  */

@@ -5,7 +5,8 @@ import spotippos.model.Property;
 import java.util.List;
 
 /**
- * Classe auxiliar que representa a estrutura do arquivo json de propriedades.
+ * Classe auxiliar utilizada pelo ObjectMapper para parsear o arquivo json de propriedades.
+ *
  * @author Marcio Bernardo.
  */
 final class JsonProperties {

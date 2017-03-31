@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Classe responsável por carregar e fornecer informações sobre as Provincias.
+ * Classe respons&aacute;vel por carregar e fornecer informa&ccedil;&otilde;es sobre as Provincias.
  *
  * @author Marcio Bernardo
  */
@@ -30,9 +30,9 @@ public class ProvinceService {
     private List<Province> provinces;
 
     /**
-     * Inicializa o service bean de províncias, carregando-as do arquivo de dados.
+     * Inicializa o service bean de prov&iacute;ncias, carregando-as do arquivo de dados.
      *
-     * @throws IOException caso não seja possível ler o arquivo de dados.
+     * @throws IOException caso n&atilde;o seja poss&iacute;vel ler o arquivo de dados.
      */
     @PostConstruct
     public void init() throws IOException {
@@ -40,10 +40,10 @@ public class ProvinceService {
     }
 
     /**
-     * Carrega o json com as províncias.
+     * Carrega o json com as prov&iacute;ncias.
      *
-     * @param file arquivo contendo as províncias.
-     * @throws IOException caso não seja possível carregar o arquivo.
+     * @param file arquivo contendo as prov&iacute;ncias.
+     * @throws IOException caso n&atilde;o seja poss&iacute;vel carregar o arquivo.
      */
      synchronized void loadData(InputStream file) throws IOException {
         provinces = new ArrayList<>();
@@ -60,11 +60,11 @@ public class ProvinceService {
     }
 
     /**
-     * Retorna a(s) provícia(s) existente em uma determinada coordenada.
+     * Retorna a(s) prov&iacute;cia(s) existente em uma determinada coordenada.
      *
-     * @param x latitude da província.
-     * @param y longitude da província.
-     * @return Lista da(s) província(s) na coordenada informada.
+     * @param x latitude da prov&iacute;ncia.
+     * @param y longitude da prov&iacute;ncia.
+     * @return Lista da(s) prov&iacute;ncia(s) na coordenada informada.
      */
     public List<Province> getProvinces(int x, int y) {
         return provinces.stream()
@@ -76,9 +76,9 @@ public class ProvinceService {
     }
 
     /**
-     * Getter da lista de províncias.
+     * Getter da lista de prov&iacute;ncias.
      *
-     * @return lista de províncias
+     * @return lista de prov&iacute;ncias
      */
     public List<Province> getProvinces() {
         return Collections.unmodifiableList(provinces);

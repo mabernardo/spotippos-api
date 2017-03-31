@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.List;
 
 /**
@@ -53,7 +52,7 @@ public class Property {
     private List<String> provinces;
 
     /**
-     * Construtor default. Necessário para o ObjectMapper.
+     * Construtor default. Necess&aacute;rio para o ObjectMapper.
      */
     public Property() { }
 
@@ -62,12 +61,12 @@ public class Property {
      * @param id id da propriedade.
      * @param title nome da propriedade.
      * @param price preco da propriedade.
-     * @param description descrição da propriedade.
+     * @param description descri&ccedil;&atilde;o da propriedade.
      * @param x coordenada x da propriedade.
      * @param y coordenada y da propriedade.
-     * @param beds número de quartos.
-     * @param baths número de banheiros.
-     * @param squareMeters área em m2 da propriedade.
+     * @param beds n&uacute;mero de quartos.
+     * @param baths n&uacute;mero de banheiros.
+     * @param squareMeters &aacute;rea em m2 da propriedade.
      */
     public Property(Integer id, String title, Integer price, String description, Integer x, Integer y, Integer beds,
                     Integer baths, Integer squareMeters, List<String> provinces) {

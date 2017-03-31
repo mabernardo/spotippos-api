@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * Classe com configurações e ponto de partida da aplicação.
+ * Classe com configura&ccedil;&otilde;es e ponto de partida da aplica&ccedil;&atilde;o.
  *
  * @author Marcio Bernardo
  */
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.PropertySource;
 public class Application {
 
     /**
-     * Ponto de partida da aplicação.
+     * Ponto de partida da aplica&ccedil;&atilde;o.
      *
      * @param args argumentos da linha de comando.
      */

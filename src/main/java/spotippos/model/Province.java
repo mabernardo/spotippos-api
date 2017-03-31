@@ -1,7 +1,7 @@
 package spotippos.model;
 
 /**
- * POJO imutável das Provincias, contendo o nome e suas fronteiras.
+ * POJO imut&aacute;vel das Provincias, contendo o nome e suas fronteiras.
  *
  * @author Marcio Bernardo
  */
@@ -12,8 +12,8 @@ public class Province {
 
     /**
      * Construtor com todos os atribuitos do objeto.
-     * @param name nome da província.
-     * @param boundaries limites da província.
+     * @param name nome da prov&iacute;ncia.
+     * @param boundaries limites da prov&iacute;ncia.
      */
     public Province(String name, Boundary boundaries) {
         this.name = name;
@@ -21,16 +21,16 @@ public class Province {
     }
 
     /**
-     * Getter do nome da província
-     * @return String nome da província
+     * Getter do nome da prov&iacute;ncia
+     * @return String nome da prov&iacute;ncia
      */
     public String getName() {
         return name;
     }
 
     /**
-     * Getter dos limites da província.
-     * @return Boundary limites da província.
+     * Getter dos limites da prov&iacute;ncia.
+     * @return Boundary limites da prov&iacute;ncia.
      */
     public Boundary getBoundaries() {
         return boundaries;

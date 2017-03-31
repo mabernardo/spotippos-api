@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class PropertyNotFoundException extends RuntimeException {
 
     public PropertyNotFoundException(Integer id) {
-        super(String.format("Propriedade não encontrada '%d'.", id));
+        super(String.format("Propriedade n\u00e3o encontrada '%d'.", id));
     }
 }
